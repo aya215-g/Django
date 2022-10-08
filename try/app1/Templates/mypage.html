@@ -1,0 +1,41 @@
+{% block content %}
+<form action="/test" method="POST">
+    {%csrf_token%}
+    
+        {%for item in form%}
+            <tr style="border:4px solid rgb(4, 36, 78) ;">
+                <td style="border:4px solid rgb(10, 139, 139) ;font-weight: lighter;font-style:italic;font-size: large;">
+                    {{ item.label_tag }} {{ item }}
+                </td>
+            </tr>
+    
+    
+        {%endfor%}
+   
+    
+        <input type="submit" value="register"/>
+    
+</form>
+
+                <td style="border:4px solid rgb(114, 157, 212) ;font-weight: lighter;font-style:italic ;font-size: large;">
+                    {{output}}                    
+                </td>
+                <td style="border:4px solid rgb(114, 157, 212) ;font-weight: lighter;font-family: cursive;font-size: small;">{{output2}} </td>
+                <td style="border:4px solid rgb(114, 157, 212) ;font-weight: lighter;font-family: cursive;font-size: small;">{{output3}} </td>
+                <td style="border:4px solid rgb(114, 157, 212) ;font-weight: lighter;font-family: cursive;font-size: small;">{{output4}} </td>
+              
+                
+                
+            </tr>
+            <td style="border:4px solid rgb(114, 157, 212) ;font-weight: lighter;font-family: cursive;font-size: small;">{{output5}} </td>
+                <td style="border:4px solid rgb(114, 157, 212) ;font-weight: lighter;font-family: cursive;font-size: small;">{{output6}} </td>
+                <td style="border:4px solid rgb(114, 157, 212) ;font-weight: lighter;font-family: cursive;font-size: small;">{{output7}} </td>
+                <td style="border:4px solid rgb(114, 157, 212) ;font-weight: lighter;font-family: cursive;font-size: small;">{{output8}} </td>
+            </tr>
+            <tr style="border:4px solid rgb(114, 157, 212) ;">
+                <td style="border:4px solid rgb(114, 157, 212) ;font-weight: lighter;font-family: cursive;font-size: small;">{{output10}} </td>
+                <td style="border:4px solid rgb(114, 157, 212) ;font-weight: lighter;font-family: cursive;font-size: small;">{{output11}} </td>
+                <td style="border:4px solid rgb(114, 157, 212) ;font-weight: lighter;font-family: cursive;font-size: small;">{{output12}} </td>
+
+
+{% endblock %}

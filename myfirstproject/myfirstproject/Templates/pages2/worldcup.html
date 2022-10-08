@@ -1,0 +1,21 @@
+{% extends 'pages2/base2.html' %}
+
+
+{% block content  %}
+
+<form action="/worldcup" method="POST">
+    {% csrf_token %}
+
+    {{form.as_p}}
+
+
+
+    <input type="submit" value="Start"/>
+
+
+</form>
+
+<h1> {{ output | linebreaks}} </h1>
+
+
+ {% endblock  %} 

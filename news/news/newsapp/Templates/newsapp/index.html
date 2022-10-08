@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+.bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('https://www.w3schools.com/w3images/profile_girl.jpg');
+  min-height: 100%;
+}
+.pad{
+    padding: 10px;
+    margin: 5px;
+}
+</style>
+</head>
+<body>
+
+{% for index, row in data.iterrows %}
+<div class="pad">
+
+    <h1>{{ row.title }}</h1>
+        {% if row.author  %}
+        <span >{{ row.author }}</span>
+    {% else %}
+        <span>author not available</span>
+    {% endif %}
+    <h6>{{ row.publishedAt }}</h6>
+    <p>{{ row.description }}</p>
+    <a href="{{ row.url }}"> refrence</a> <br>
+    <img style="width: 20%; margin: 5px;" src="{{row.urlToImage}}">
+    <p>{{ row.content }}</p>
+<hr >
+</div>
+{% endfor %}
+
+</body>
+</html>

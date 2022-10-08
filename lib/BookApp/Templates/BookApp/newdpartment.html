@@ -1,0 +1,35 @@
+{% extends 'BookApp/index.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="jumbotron text-center">
+    <h1>The largest library in the Middle East</h1>
+    <p> You can find any book about computing here !</p>
+
+</div>
+
+<div class="container">
+    <form action="/Newdepartment" method="post">
+        {% csrf_token %}
+        <div class="row">
+        <div>
+            {{form.code | as_crispy_field}}
+        </div>
+        <div class="col-8">
+            {{form.name | as_crispy_field}}
+
+        </div>
+        <div class="col-12">
+        {{form.description | as_crispy_field}}
+        </div>
+        </div>
+        <input type="submit" value="Add New Department">
+
+
+    </form>
+</div>
+
+
+
+{% endblock %}

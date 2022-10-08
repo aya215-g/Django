@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dd{
+            border: 5px solid rgb(63, 63, 133);
+            font-size: larger;
+            font-weight: bolder;
+            padding: 5px;
+        }
+    </style>
+    <link rel="stylesheet" href="{% static 'BookApp/CSS/bootstrap.min.css' %}">
+</head>
+<body>
+    <header style="background-color:rgb(16, 216, 193) ; color: rgb(17, 16, 17);font-size: larger;font-weight: bolder;
+    padding: 20px;margin-bottom: 20px; text-align: center;">
+        Welcome To My Library :)
+    </header>
+     {% block content %}
+     {% endblock %}
+
+    <footer style="background-color:rgb(16, 216, 193) ; color: rgb(29, 28, 31);font-size: larger;font-weight: bolder;
+    padding: 20px;margin-bottom: 20px; text-align: center;">
+         Good Bye , See you Later !
+    </footer>
+</body>
+</html>

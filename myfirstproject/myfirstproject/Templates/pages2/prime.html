@@ -1,0 +1,21 @@
+{% extends 'pages2/base2.html' %}
+
+
+{% block content  %}
+
+<form action="/checkPrime" method="POST">
+    {% csrf_token %}
+
+    {{form.as_p}}
+
+
+
+    <input type="submit" value="Check This Number"/>
+
+
+</form>
+
+<h1> {{ output }} </h1>
+
+
+ {% endblock  %} 

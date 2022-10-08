@@ -1,0 +1,26 @@
+{% extends 'pages/base.html' %}
+
+
+{% block content  %}
+
+<form action="/arithmetic" method="POST">
+    {% csrf_token %}
+
+    {{form.as_p}}
+
+
+
+    <input type="submit" value="add"/>
+
+
+</form>
+
+<h1>{{x}} + {{y}} = {{r1}} </h1>
+<h1>{{x}} - {{y}} = {{r2}} </h1>
+<h1>{{x}} * {{y}} = {{r3}} </h1>
+<h1>{{x}} / {{y}} = {{r4}} </h1>
+<h1>{{x}} mod {{y}} = {{r5}} </h1>
+
+
+
+ {% endblock  %} 

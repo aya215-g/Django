@@ -1,0 +1,13 @@
+{% extends "page/base.html" %}
+
+{% block content %}
+<form action="/Test" method="post">
+    {%csrf_token%}
+    {% for form in forms %}
+       {{form.as_p}}
+    {% endfor  %}
+    <input type="submit" value="check"/>
+    
+</form>
+<h1 style="color: rgb(91, 7, 7);">{{ output }}</h1>
+{% endblock %}

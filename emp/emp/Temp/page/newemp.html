@@ -1,0 +1,13 @@
+{% extends "page/base.html" %}
+
+{% block content %}
+<form action="/regnewemp" method="post">
+    {%csrf_token%}
+  
+    {{form.as_p}}
+  
+    <input type="submit" value="Register"/>
+    
+</form>
+<h1 style="color: white;">{{ output }}</h1>
+{% endblock %}

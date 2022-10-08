@@ -1,0 +1,21 @@
+{% extends 'pages/base.html' %}
+
+
+{% block content  %}
+
+<form action="/ADD2" method="POST">
+    {% csrf_token %}
+
+    {{form.as_p}}
+
+
+
+    <input type="submit" value="ADD"/>
+
+
+</form>
+
+<h1>Addition = {{ output }}</h1>
+
+
+ {% endblock  %} 
